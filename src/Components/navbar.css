@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: normal;
+  font-style: normal;
+  src: local("Ubuntu"),
+    url("./qa-theme/SnowFlat/fonts/ubuntu-regular.woff2") format("woff2"),
+    url("./qa-theme/SnowFlat/fonts/ubuntu-regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: bold;
+  font-style: normal;
+  src: local("Ubuntu Bold"), local("Ubuntu-Bold"),
+    url("./qa-theme/SnowFlat/fonts/ubuntu-bold.woff2") format("woff2"),
+    url("./qa-theme/SnowFlat/fonts/ubuntu-bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: normal;
+  font-style: italic;
+  src: local("Ubuntu Italic"), local("Ubuntu-Italic"),
+    url("./qa-theme/SnowFlat/fonts/ubuntu-italic.woff2") format("woff2"),
+    url("./qa-theme/SnowFlat/fonts/ubuntu-italic.woff") format("woff");
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: bold;
+  font-style: italic;
+  src: local("Ubuntu Bold Italic"), local("Ubuntu-BoldItalic"),
+    url("./qa-theme/SnowFlat/fonts/ubuntu-bold-italic.woff2") format("woff2"),
+    url("./qa-theme/SnowFlat/fonts/ubuntu-bold-italic.woff") format("woff");
+}
+.qa-body-js-on .qa-notice {
+  display: none;
+}
+.qa-nav-user {
+  margin: 0 !important;
+}
+.fb-login-button.fb_iframe_widget.fb_hide_iframes span {
+  display: none;
+}
+.qa-logo-link img {
+  padding-top: 8px;
+}
+.qa-nav-main-custom-6 {
+  width: 2em;
+  background: url("http://developer.android.com/images/brand/Android_Robot_100.png")
+    no-repeat center center;
+  background-size: 50% 50%;
+}
+.qa-logo {
+  position: absolute;
+  left: 10px;
+}
