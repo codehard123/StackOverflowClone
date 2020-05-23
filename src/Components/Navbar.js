@@ -1,6 +1,7 @@
 import React from "react";
 import "./navbar.css";
-
+import { Link } from "react-router-dom";
+import QA from "./QA.JPG";
 function Navbar() {
   return (
     <div id="qam-topbar" className="clearfix">
@@ -9,10 +10,12 @@ function Navbar() {
           <i className="icon-th-list"></i>
         </div>
         <div className="qam-account-items-wrapper">
-          <div id="qam-account-toggle" className="qam-logged-out">
-            <i className="icon-key qam-auth-key"></i>
-            <div className="qam-account-handle">Login</div>
-          </div>
+          <Link to="/login">
+            <div id="qam-account-toggle" className="qam-logged-out">
+              <i className="icon-key qam-auth-key"></i>
+              <div className="qam-account-handle">Login</div>
+            </div>
+          </Link>
           <div className="qam-account-items clearfix">
             <form action="./login?to=" method="post">
               <input
@@ -75,7 +78,7 @@ function Navbar() {
         <div className="qa-logo">
           <a href="./" className="qa-logo-link" title="Question2Answer Q&amp;A">
             <img
-              src="./../images/question2answer-qa-logo-white-454x40.png"
+              src={QA}
               width="454"
               height="40"
               alt="Question2Answer Q&amp;A"
@@ -110,9 +113,9 @@ function Navbar() {
               </a>
             </li>
             <li className="qa-nav-main-item qa-nav-main-user">
-              <a href="./users" className="qa-nav-main-link">
+              <Link to="/user" className="qa-nav-main-link">
                 Users
-              </a>
+              </Link>
             </li>
             <li className="qa-nav-main-item qa-nav-main-ask">
               <a href="./ask" className="qa-nav-main-link">
@@ -120,9 +123,9 @@ function Navbar() {
               </a>
             </li>
             <li className="qa-nav-main-item-opp qa-nav-main-custom-1">
-              <a href="./../" className="qa-nav-main-link">
+              <Link to="/profile" className="qa-nav-main-link">
                 About
-              </a>
+              </Link>
             </li>
           </ul>
           <div className="qa-nav-main-clear"></div>

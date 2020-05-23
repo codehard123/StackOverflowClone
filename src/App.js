@@ -1,30 +1,24 @@
 import React from "react";
-import AskQuestion from "./Components/ask-question";
+import LoginPage from "./Components/LoginPage";
 import "./App.css";
-import Navbar from "./Components/Navbar";
-import Question from "./Components/question";
-
-import SearchBox from "./Components/SearchBox";
-import RandomQuote from "./Components/RandomQuote";
-import Categories from "./Components/Categories";
-import Tags from "./Components/tags";
-
+import HomePage from "./Components/Homepage";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import ProfilePage from "./Components/ProfilePage";
+import UserPage from "./Components/UsersPage";
+import TagsPage from "./Components/TagsPage";
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <main>
-        <AskQuestion />
-
-        <Question />
-      </main>
-      <main>
-        <SearchBox />
-        <RandomQuote />
-        <Categories />
-        <Tags />
-      </main>
-    </div>
+    <Router>
+      <Route path="/" exact component={HomePage}></Route>
+      <Route path="/login" exact component={LoginPage}></Route>
+      <Route path="/profile" exact component={ProfilePage}></Route>
+      <Route path="/user" exact component={UserPage}></Route>
+      <Route path="/unanswered" exact component={HomePage}></Route>
+      <Route path="/hot" exact component={HomePage}></Route>
+      <Route path="/questions" exact component={HomePage}></Route>
+      <Route path="/activity" exact component={LoginPage}></Route>
+      <Route path="/tags" exact component={TagsPage}></Route>
+    </Router>
   );
 }
 
